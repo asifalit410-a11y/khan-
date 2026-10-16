@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khan Electrical Store | Electrical Services & Products</title>
+<meta name="description" content="Professional electrical services and quality electrical supplies, all in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><img src="images/store-logo.png" alt="" width="36" height="36"><span>Khan Electrical Store</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav id="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#services">Electrical Services</a><a href="#work">Our Work</a>
+    <a href="#shop">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+    <a class="btn" href="#contact">Get a Quote</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">🛒 <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <span class="eyebrow">Matwali Khan Electrician and Plumber</span>
+    <h1>POWERING YOUR WORLD WITH 10 YEARS OF EXPERIENCE</h1>
+    <p class="hero-sub">Reliable Electrical &amp; Plumbing Services You Can Trust.</p>
+    <p>With 10 years of hands-on experience, Matwali Khan Electrician and Plumber provides professional electrical services, plumbing solutions, repairs, and quality electrical supplies to meet your needs.</p>
+    <div class="row"><a class="btn" href="#services">Explore Our Services</a><a class="btn ghost" href="#shop">Shop Electrical Products</a></div>
+  </div>
+  <div class="hero-frame"><img class="hero-img" src="images/hero-electrician.jpg" alt="Khan Electrical Store (replace with your photo)" width="800" height="800"><a class="hero-card" id="heroWa" href="#contact"><b>Khan Electrical Store</b><span>Order on WhatsApp</span></a></div>
+</section>
+
+<section id="services" class="wrap">
+  <h2>OUR ELECTRICAL SERVICES</h2>
+  <div class="grid" id="serviceGrid"></div>
+  <div class="ba-wrap">
+    <h3>Before &amp; After: Our Work</h3>
+    <p class="note">Move your mouse over a photo (or tap it on a phone) to see the result.</p>
+    <div class="ba-grid" id="baGrid"></div>
+  </div>
+</section>
+
+<section id="work" class="wrap alt">
+  <h2>OUR WORK SPEAKS FOR ITSELF</h2>
+  <p class="note">Photos of completed work. To add more, put photos in the images folder and add them to WORK in script.js.</p>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section id="shop" class="wrap">
+  <h2>KHAN ELECTRICAL STORE</h2>
+  <p class="sub">Quality Electrical Products for Every Project.</p>
+  <div class="tools">
+    <label class="sr" for="search">Search products</label>
+    <input id="search" type="search" placeholder="Search products...">
+    <div class="chips" id="chips" role="group" aria-label="Product categories"></div>
+  </div>
+  <div class="grid products" id="productGrid"></div>
+  <p class="note">Demo shop: prices are placeholders and stock is not tracked. Orders are sent as requests; online payment and inventory need a backend.</p>
+</section>
+
+<section id="about" class="wrap alt about">
+  <img src="images/about-us.jpg" alt="Khan Electrical Store shop front" width="1200" height="900" loading="lazy">
+  <div>
+    <h2>ABOUT KHAN ELECTRICAL STORE</h2>
+    <p>Khan Electrical Store is dedicated to electrical services and electrical products. Our goal is to make it easier for customers to explore electrical solutions and find the products they need.</p>
+    <p class="note" id="bizInfo"></p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>WHY CHOOSE US</h2>
+  <div class="grid four">
+    <div class="card feat"><span>✔</span><h3>Quality Products</h3><p>Electrical supplies for every project.</p></div>
+    <div class="card feat"><span>⚡</span><h3>Professional Service</h3><p>Careful, tidy electrical work.</p></div>
+    <div class="card feat"><span>☎</span><h3>Customer Support</h3><p>Ask us before you buy or book.</p></div>
+    <div class="card feat"><span>⚙</span><h3>Reliable Solutions</h3><p>Practical answers to electrical needs.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="wrap alt">
+  <h2>CONTACT US</h2>
+  <div class="contact">
+    <div>
+      <p><b>Phone:</b> <span id="cPhone"></span></p>
+      <p><b>Email:</b> <span id="cEmail"></span></p>
+      <p><b>Address:</b> <span id="cAddress"></span></p>
+      <button class="btn" id="waBtn">Chat on WhatsApp</button>
+      <div class="map" id="map">Google Maps embed goes here (see script.js CONFIG.mapEmbedUrl)</div>
+    </div>
+    <form id="contactForm">
+      <label>Name<input name="name" required></label>
+      <label>Phone<input name="phone" type="tel" required></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button class="btn" type="submit">Send Message on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div><b>Khan Electrical Store</b><p>Electrical services and quality electrical supplies.</p></div>
+    <div><b>Quick Links</b><a href="#home">Home</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#shop">Shop</a><a href="#contact">Contact</a></div>
+    <div><b>Services</b><a href="#services">Installation</a><a href="#services">Wiring</a><a href="#services">Lighting</a></div>
+    <div><b>Shop</b><span id="footCats"></span></div>
+    <div><b>Follow</b><span id="social"></span></div>
+  </div>
+  <p class="copy">© <span id="year"></span> Khan Electrical Store. All rights reserved.</p>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#contact">WhatsApp Order</a>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="mbox"><button class="mclose" id="mClose" aria-label="Close details">✕</button>
+    <img id="mImg" src="" alt="">
+    <div class="mtext"><small id="mCat"></small><h3 id="mName"></h3><p id="mDesc"></p><span class="price" id="mPrice"></span><button class="btn" id="mAdd">Add to Cart</button><p class="note">Order requests are confirmed with you on WhatsApp.</p></div>
+  </div>
+</div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" hidden>
+  <div class="done" id="done" hidden><h3>Order request ready</h3><p id="doneText"></p><p>If WhatsApp did not open, <a id="doneLink" target="_blank" rel="noopener"><b>tap here to send it</b></a>.</p><button class="btn" id="doneBtn" type="button">Continue Shopping</button></div>
+  <div class="dh"><h3>Your Cart</h3><button id="closeCart" aria-label="Close cart">✕</button></div>
+  <div id="cartItems"></div>
+  <p class="total">Total: <b id="cartTotal"></b></p>
+  <form id="orderForm">
+    <label>Name<input name="name" required></label>
+    <label>Phone<input name="phone" type="tel" required></label>
+    <label>Address<textarea name="address" rows="2" required></textarea></label>
+    <label>Order notes<textarea name="notes" rows="2"></textarea></label>
+    <fieldset class="pay"><legend>Payment method</legend>
+      <label class="radio"><input type="radio" name="pay" value="Cash on Delivery" checked> Cash on Delivery</label>
+      <label class="radio"><input type="radio" name="pay" value="Online payment (send money)"> Online payment (send money)</label>
+      <label class="radio"><input type="radio" name="pay" value="QR code payment"> Pay by scanning QR code</label>
+      <div class="paybox" id="payBox" hidden>
+        <p>Send payment to: <b id="payNum"></b></p><p class="note" id="payName"></p>
+        <img id="qrImg" src="images/payment-qr.png" alt="Payment QR code" width="180" height="180">
+        <p class="note" id="qrCap"></p>
+        <p class="note">After paying, send the payment screenshot on WhatsApp so we can confirm your order.</p>
+      </div>
+    </fieldset>
+    <button class="btn" type="submit">Send Order Request</button>
+    <p class="note">This sends your order as a WhatsApp message. We confirm price and availability with you. Payment is made by you directly (cash on delivery, or send money / QR code); nothing is charged on this website.</p>
+  </form>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
